@@ -7,12 +7,17 @@ A domani :slightly_smiling_face:
     $mail = $_GET["mail"];
     $age = $_GET["age"];
 
+    
 
 
-    if (strpos($mail, '@') && strpos($mail, '.') && is_numeric($age) && strlen($name) > 3 ) {
-        echo 'Accesso riuscito';
+if (strpos($mail, '@') && strpos($mail, '.') != false && is_numeric($age) && strlen($name) > 3 ) {
+    $logIn = [$name, $mail, $age];
+    echo 'Accesso riuscito :';
+    
+    for($i = 0; $i < count($logIn); $i++){
+        echo $logIn[$i];  } 
     }else{
-        echo 'Accesso non riuscito';
+        echo 'Accesso non riuscito: ';
     }
 
 
