@@ -5,9 +5,8 @@ A domani :slightly_smiling_face:
 <?php 
     $name = $_GET["name"];
     $mail = $_GET["mail"];
-    $age = (int) $_GET["age"];
+    $age = number_format($_GET["age"] );
 
-    
     
     if (strpos($mail, '@') && strpos($mail, '.') != false && is_numeric($age) && strlen($name) > 3 ) {
         
